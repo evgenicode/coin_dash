@@ -23,7 +23,7 @@ func _process(delta):
 func start():
 	set_process(true)
 	position = screensize / 2
-	$AnimatedSprite2d.animation = "idle"
+	$AnimatedSprite2D.animation = "idle"
 
 func die():
 	$AnimatedSprite2D.animation = "hurt"
@@ -31,7 +31,7 @@ func die():
 
 
 func _on_area_entered(area):
-	if area.is_in_group("coints"):
+	if area.is_in_group("coins"):
 		area.pickup()
 		pickup.emit()
 	if area.is_in_group("obstacles"):
