@@ -15,6 +15,7 @@ func _ready():
 	$Player.hide()
 	
 	
+	
 func new_game():
 	playing = true
 	level = 1
@@ -50,8 +51,6 @@ func _on_game_timer_timeout():
 
 func _on_player_hurt():
 	game_over()
-	
-	
 
 
 func _on_player_pickup():
