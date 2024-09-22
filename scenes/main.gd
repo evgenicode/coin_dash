@@ -14,6 +14,9 @@ func _ready():
 	$Player.screensize = screensize
 	$Player.hide()
 	
+	#For debugging purposes only
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), -15)
+	
 	
 	
 func new_game():
@@ -34,6 +37,7 @@ func spawn_coins():
 		add_child(c)
 		c.screensize = screensize
 		c.position = Vector2(randi_range(0, screensize.x), randi_range(0, screensize.y))
+	$LevelSound.play()
 
 func _process(delta):
 	if playing and get_tree().get_nodes_in_group("coins").size() == 0:
@@ -56,6 +60,7 @@ func _on_player_hurt():
 func _on_player_pickup():
 	score += 1
 	$HUD.update_score(score)
+	$CoinSound.play()
 	
 func game_over():
 	playing = false
@@ -63,6 +68,7 @@ func game_over():
 	get_tree().call_group("coins", "queue_free")
 	$HUD.show_game_over()
 	$Player.die()
+	$EndSound.play()
 
 
 func _on_hud_start_game():
