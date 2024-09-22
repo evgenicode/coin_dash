@@ -1,53 +1,49 @@
-[gd_scene load_steps=15 format=3 uid="uid://dflyualsjrdx3"]
+[gd_scene load_steps=14 format=3 uid="uid://dflyualsjrdx3"]
 
 [ext_resource type="Script" path="res://scenes/powerups.gd" id="1_gfdds"]
-[ext_resource type="Texture2D" uid="uid://bwtdy5w5o4u4c" path="res://assets/coin/coin-frame-1.png" id="2_32jp5"]
-[ext_resource type="Texture2D" uid="uid://bh7aw2apf3vg6" path="res://assets/coin/coin-frame-2.png" id="3_cjmjc"]
-[ext_resource type="Texture2D" uid="uid://d31orxmfglapd" path="res://assets/coin/coin-frame-3.png" id="4_yxpv6"]
-[ext_resource type="Texture2D" uid="uid://ba56n2o7cuew1" path="res://assets/coin/coin-frame-4.png" id="5_0kexo"]
-[ext_resource type="Texture2D" uid="uid://v0xv6vxhl1a0" path="res://assets/coin/coin-frame-5.png" id="6_73hs0"]
-[ext_resource type="Texture2D" uid="uid://50om4ww7egd7" path="res://assets/coin/coin-frame-6.png" id="7_bmeq8"]
-[ext_resource type="Texture2D" uid="uid://doc0xt0g68woy" path="res://assets/coin/coin-frame-7.png" id="8_tsblf"]
-[ext_resource type="Texture2D" uid="uid://b10urcbde67o1" path="res://assets/coin/coin-frame-8.png" id="9_lec43"]
-[ext_resource type="Texture2D" uid="uid://b7t1ikfckrgfb" path="res://assets/coin/coin-frame-9.png" id="10_58504"]
-[ext_resource type="Texture2D" uid="uid://d31edacab54lt" path="res://assets/coin/coin-frame-10.png" id="11_ufy5e"]
-[ext_resource type="Texture2D" uid="uid://dqhbfqcqhp55n" path="res://assets/coin/coin-frame-11.png" id="12_tptjp"]
+[ext_resource type="Texture2D" uid="uid://doke8adywphcy" path="res://assets/pow/pow-frame-1.png" id="2_oohjv"]
+[ext_resource type="Texture2D" uid="uid://b4fnh673fd5hx" path="res://assets/pow/pow-frame-2.png" id="3_6olka"]
+[ext_resource type="Texture2D" uid="uid://d32pv6jsvg84h" path="res://assets/pow/pow-frame-3.png" id="4_ahym4"]
+[ext_resource type="Texture2D" uid="uid://dbmlrxakbfm5b" path="res://assets/pow/pow-frame-4.png" id="5_0frgq"]
+[ext_resource type="Texture2D" uid="uid://vlqvtfhnrdey" path="res://assets/pow/pow-frame-5.png" id="6_fljwc"]
+[ext_resource type="Texture2D" uid="uid://bvagydtssuoob" path="res://assets/pow/pow-frame-6.png" id="7_drplo"]
+[ext_resource type="Texture2D" uid="uid://810s4ktbe4rs" path="res://assets/pow/pow-frame-7.png" id="8_32t64"]
+[ext_resource type="Texture2D" uid="uid://dcmr4dwkj80pk" path="res://assets/pow/pow-frame-8.png" id="9_5iew4"]
+[ext_resource type="Texture2D" uid="uid://dnw6t5ulvuwb4" path="res://assets/pow/pow-frame-9.png" id="10_l7h25"]
+[ext_resource type="Texture2D" uid="uid://okmmr6hedl2c" path="res://assets/pow/pow-frame-10.png" id="11_6cql3"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_gia7k"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5fcf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_32jp5")
+"texture": ExtResource("2_oohjv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_cjmjc")
+"texture": ExtResource("3_6olka")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_yxpv6")
+"texture": ExtResource("4_ahym4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_0kexo")
+"texture": ExtResource("5_0frgq")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_73hs0")
+"texture": ExtResource("6_fljwc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_bmeq8")
+"texture": ExtResource("7_drplo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_tsblf")
+"texture": ExtResource("8_32t64")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_lec43")
+"texture": ExtResource("9_5iew4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_58504")
+"texture": ExtResource("10_l7h25")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_ufy5e")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_tptjp")
+"texture": ExtResource("11_6cql3")
 }],
 "loop": true,
 "name": &"sparkle",
@@ -63,9 +59,8 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_gia7k")
+sprite_frames = SubResource("SpriteFrames_q5fcf")
 animation = &"sparkle"
-frame_progress = 0.644993
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_wh5td")
