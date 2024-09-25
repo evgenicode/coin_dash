@@ -9,9 +9,20 @@ var screensize = Vector2(480, 720)
 func _process(delta):
 	velocity = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	position += velocity * speed * delta
-	position.x = clampf(position.x, 0, screensize.x)
-	position.y = clampf(position.y, 0, screensize.y)
 	
+	#rigid screen edge
+	#position.x = clampf(position.x, 0, screensize.x)
+	#position.y = clampf(position.y, 0, screensize.y)
+	
+	# scree wrapped
+	if position.x > screensize.x:
+		position.x = 0
+	if position.x < 0:
+		position.x = screensize.x
+	if position.y > screensize.y:
+		position.y = 0
+	if position.y < 0:
+		position.y = screensize.y
 	
 	if velocity.length() > 0:
 		$AnimatedSprite2D.animation = "run"
